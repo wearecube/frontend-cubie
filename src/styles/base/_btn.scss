@@ -1,0 +1,106 @@
+// Buttons
+// ----------------------------------------------
+
+/*doc
+---
+title: Button
+name: Button
+category: Base
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+<button class="btn">Simple button</button>
+<a class="btn" href="http://wearecube.ch">Link with .btn class</a>
+<a class="btn is-primary">Primary button</a>
+<a class="btn is-disabled">Disabled button</a>
+```
+*/
+
+.btn, 
+button.btn,
+a.btn {
+  display: inline-block;
+  padding: rem-calc(5 12);
+  background-color: #eee;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: rem-calc(14);
+  line-height: rem-calc(24);
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: all 300ms ease-in-out;
+  -webkit-appearance: none;
+
+  &:focus,
+  &:focus:hover,
+  &:hover,
+  &:active {
+    color: #000;
+    border-color: #666;
+    background-color: #f5f5f5;
+  }
+  &.is-primary {
+    padding: rem-calc(6 12);
+    background-color: $color-primary;
+    border: none;
+    color: white;
+    
+    &:focus,
+    &:focus:hover,
+    &:hover,
+    &:active {
+      background-color: $color-secondary;
+    }
+  }
+  &.is-big {
+    padding: rem-calc(11 24);
+    font-size: rem-calc(18);
+  }
+  &.is-primary.is-big {
+    padding: rem-calc(12 24);
+  }
+  &:disabled,
+  &.is-disabled {
+    color: #aaa;
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+}
+
+/*doc
+---
+title: Button sizes
+category: Base
+---
+
+Three sizes for the buttons: small, medium (default) and big.
+
+```html_example
+<a class="btn is-small">Big button</a>
+<a class="btn is-big">Big button</a>
+```
+*/
+.btn, 
+button.btn,
+a.btn {
+  &.is-small {
+    padding: rem-calc(3 6);
+    font-size: rem-calc(12);
+  }
+  &.is-primary.is-small {
+    padding: rem-calc(2 6);
+  }
+  .btn.is-big {
+    padding: rem-calc(11 24);
+    font-size: rem-calc(18);
+  }
+  &.is-primary.is-big {
+    padding: rem-calc(12 24);
+  }
+}

@@ -1,0 +1,52 @@
+/*doc
+---
+title: Forms
+name: forms
+category: Base
+---
+
+The HTML fieldset element is used to group several controls as well as labels (label) within a web form.
+
+```html_example
+<form action="" method="">
+  <fieldset>
+    <legend>Login</legend>
+    <label for="email">Email</label> <input id="email" name="email" type="email" placeholder="type your email here">
+    <label for="password">Password</label> <input id="password" name="password" type="password" placeholder="type your password here">
+    <input id="check" type="checkbox" name="check"> <label for="check">I'm ok</label>
+  </fieldset>
+</form>
+```
+*/
+
+// Fieldset
+// ----------------------------------------------
+fieldset {
+  
+}
+
+// Labels
+// ----------------------------------------------
+label {
+
+}
+
+// Input / Textarea
+// ----------------------------------------------
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  color: #333;
+  padding: rem-calc(5 12);
+  border: 1px solid #ccc;
+  line-height: rem-calc(24);
+  vertical-align: middle;
+
+  &:focus {
+    border-color: #333;
+  }
+}

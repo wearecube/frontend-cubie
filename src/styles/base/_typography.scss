@@ -1,0 +1,90 @@
+// Headings
+// ----------------------------------------------
+
+/*doc
+---
+title: Headings
+name: Heading
+category: Base
+---
+
+Heading elements implement six levels of document headings, `<h1>` is the most important and `<h6>` is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically.
+
+```html_example
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+
+<h1 class="h2">Heading level 1 with .h2 style</h1>
+<h2 class="h1">Heading level 2 with .h1 style</h2>
+```
+*/
+
+#{headings(all)} {
+
+}
+
+h1, .h1 {
+  
+}
+
+h2, .h2 {
+  
+}
+
+h3, .h3 {
+  
+}
+
+h4, .h4 {
+  
+}
+
+h5, .h5 {
+  
+}
+
+h6, .h6 {
+  
+}
+
+// Links
+// ----------------------------------------------
+
+/*doc
+---
+title: Links
+name: Links
+category: Base
+---
+
+The HTML `<a>` Element (or the HTML Anchor Element) defines a hyperlink, the named target destination for a hyperlink, or both.
+
+```html_example
+<a href="http://wearecube.ch/">Here we cube</a>
+```
+*/
+
+a {
+  color: darken($color-secondary, 5%);
+  
+  &:hover,
+  &:active {
+    color: $color-primary;
+  }
+  &:visited {
+
+  }
+  &:focus {
+    
+  }
+}
+
+// Horizontal lines
+// ----------------------------------------------
+hr {
+  
+}

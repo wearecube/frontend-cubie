@@ -1,0 +1,64 @@
+/*doc
+---
+title: Horizontal navigation
+name: navigation
+category: Module
+---
+
+Responsive hotizontal menu.
+
+```html_example
+<nav class="header-nav nav-horizontal" role="navigation">
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/styleguide">Styleguide</a>
+    </li>
+    <li>
+      <a href="https://github.com/wearecube">Github repo</a>
+    </li>
+  </ul>
+</nav>
+```
+*/
+
+.nav-horizontal ul {
+  @include reset-list;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  
+  @include susy-breakpoint($break-medium) {
+    flex-flow: row wrap;
+    padding: 0;
+  }
+}
+.nav-horizontal li {
+  margin-top: rem-calc(1);
+  @include susy-breakpoint($break-medium) {
+    margin-top: 0;
+    margin-left: rem-calc(1);
+  }
+  &:first-child {
+    margin: 0;
+  }
+}
+.nav-horizontal a {
+  display: block;
+  padding: rem-calc(12);
+  background: $color-secondary;
+  color: white;
+  text-decoration: none;
+  transition: background-color 300ms ease;
+
+  @include susy-breakpoint($break-medium) {
+    padding: rem-calc(6 12);
+  }
+
+  &:hover {
+    background-color: $color-primary;
+  }
+}

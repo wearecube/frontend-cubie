@@ -1,0 +1,27 @@
+/*doc
+---
+title: Header
+name: header
+category: Layout
+---
+
+```html_example
+<header class="header-layout" role="banner">
+  The header's content gets here
+</header>
+```
+*/
+
+.header-layout {
+  padding: rem-calc(24 0);
+}
+.header-logo {
+  text-align: center;
+  margin-top: rem-calc(48);
+  
+  @include susy-breakpoint($break-medium) {
+    float: left;
+    margin-top: 0;
+    text-align: left;
+  }
+}

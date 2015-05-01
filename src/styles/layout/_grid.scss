@@ -1,0 +1,24 @@
+/*doc
+---
+title: Grid container
+name: grid
+category: Layout
+---
+
+This is not a grid system. Show what it is about on <a href="http://susy.oddbird.net/">Susy Framework page</a> 
+
+```html_example
+<div class="grid-container">
+  I'm a responsive container!
+</div>
+```
+*/
+
+.grid-container {
+  @include container;
+  padding: 0 rem-calc(20);
+
+  @include susy-breakpoint($break-large) {
+    padding: 0;
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="160px" height="170px" viewBox="0 0 160 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>frontend_cubie</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="frontend_cubie" sketch:type="MSLayerGroup" transform="translate(-1.000000, -1.000000)">
+            <g id="cube" fill="#8BA124" sketch:type="MSShapeGroup">
+                <path d="M81.0000001,96 L151,126 L81.0000001,171 L11,126 L81.0000001,96 Z" id="faceBottom" fill-opacity="0.700000048"></path>
+                <path d="M81,1.00000001 L161,31 L151,126 L81,96 L81,1.00000001 Z" id="faceBackRight" fill-opacity="0.519999981"></path>
+                <path d="M0.999999999,1.00000001 L81,31 L71,126 L0.999999999,96 L0.999999999,1.00000001 Z" id="faceBackLeft" fill-opacity="0.400000006" transform="translate(41.000000, 63.500000) scale(-1, 1) translate(-41.000000, -63.500000) "></path>
+                <path d="M81,31 L151,76 L161,171 L81,131 L81,31 Z" id="faceFrontRight" fill-opacity="0.699999988" transform="translate(121.000000, 101.000000) scale(1, -1) translate(-121.000000, -101.000000) "></path>
+                <path d="M1,31 L81,71.0000004 L81,170.999993 L11,126 L1,31 Z" id="faceFrontLeft" fill-opacity="0.599999964"></path>
+                <path d="M81.0000001,0.999999992 L161,31 L81,70.9999963 L1.00000006,31 L81.0000001,0.999999992 Z" id="faceTop" fill-opacity="0.400000006"></path>
+            </g>
+            <g id="face" transform="translate(97.107612, 69.024272)" sketch:type="MSShapeGroup">
+                <ellipse id="eye2" fill-opacity="0.899999976" fill="#FFFFFF" cx="10.8314673" cy="21.0452356" rx="7.82018512" ry="12.9087422"></ellipse>
+                <ellipse id="eye1" fill-opacity="0.899999976" fill="#FFFFFF" cx="40.5113889" cy="10.5544179" rx="6.33062605" ry="10.530816"></ellipse>
+                <path d="M0.0603674541,53.3276699 C0.0603674541,53.3276699 21.4776903,47.787522 31.1364829,42.8300971 C40.7952756,37.8726721 50.0341207,28.1334951 50.0341207,28.1334951 L48.3543307,38.211165 C48.3543307,38.211165 42.4750656,49.9684466 31.1364829,56.2669903 C19.7979003,62.565534 3.83989501,60.0461165 3.83989501,60.0461165 L0.0603674541,53.3276699 Z" id="mooth" fill="#1D5C25"></path>
+                <path d="M0.0603674541,53.3276699 C0.0603674541,53.3276699 21.4776903,47.787522 31.1364829,42.8300971 C40.7952756,37.8726721 50.0341207,28.1334951 50.0341207,28.1334951 L48.8923873,30.9757281 C48.8923873,30.9757281 43.2309718,38.6771851 31.8923892,44.9757288 C20.5538065,51.2742725 0.892388452,54.9757288 0.892388452,54.9757288 L0.0603674541,53.3276699 Z" id="teeth" fill-opacity="0.899999976" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
