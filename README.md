@@ -56,13 +56,14 @@ And you're set!
 
 #TODO
 
-[] Template system (assemble? handlebars?)
-[] Base grid system?
-[x] HTML mininfied
-[X] Images optimization
-[X] SVG Icons 
-[] Browser caching (filerev)
-[] Tests (karma)
+* [x] Base grid system?
+* [x] HTML mininfied
+* [x] Images optimization
+* [x] SVG Icons 
+* [] Add ModernizR
+* [] Template system (assemble? handlebars?)
+* [] Browser caching (filerev?)
+* [] Tests (karma?)
 
 
 ### How to add an icon?
