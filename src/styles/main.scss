@@ -86,3 +86,9 @@ $color-secondary: #418D4B;
 // /* Example state: Collapsed Product */
 // .product.is-collapsed { }
 // ----------------------------------------------
+.is-hidden {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
