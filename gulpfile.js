@@ -197,7 +197,7 @@ gulp.task('serve', function () {
 gulp.task('sitemap', function () {
   return gulp.src(dist+'/*.html')
     .pipe(sitemap({
-      siteUrl: 'http://www.wearecube.ch'
+      siteUrl: 'http://www.wearecube.ch/frontendcubie/'
     }))
     .pipe(gulp.dest(dist));
 });

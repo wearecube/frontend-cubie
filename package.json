@@ -2,9 +2,10 @@
   "name": "FrontendCubie",
   "version": "1.0.0",
   "description": "Cubie is an HTML5 starter kit that includes: packages and tasks managers, a local server with browser synchronization, a beautiful auto-generated documentation, a styles pre-processor, files minification and images optimisation",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wearecube/frontend-cubie.git"
+  "homepage": "http://www.wearecube.ch/frontendcubie/",
+  "repository" : { 
+    "type" : "git", 
+    "url" : "https://github.com/wearecube/frontend-cubie.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

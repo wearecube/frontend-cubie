@@ -6,4 +6,4 @@
     // Add your scripts here
   });
 
-})(window, document);
+})(Zepto, window, document);
