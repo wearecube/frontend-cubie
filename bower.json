@@ -14,12 +14,12 @@
     "tests"
   ],
   "devDependencies": {
-    "hologram-github-theme": "~0.1.2",
+    "hologram-github-theme": "~0.1.2"
   },
   "dependencies": {
+    "zepto": "~1.1.6",
+    "normalize-scss": "~3.0.3",
     "susy": "~2.2.2",
-    "breakpoint-sass": "~2.5.0",
-    "jquery": "~2.1.3",
-    "normalize.css": "~3.0.3"
+    "breakpoint-sass": "~2.5.0"
   }
 }

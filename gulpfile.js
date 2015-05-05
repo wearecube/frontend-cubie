@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   header = require('gulp-header'),
   inject = require('gulp-inject'),
+  concat = require('gulp-concat'),
   
   // Template
   minifyHTML = require('gulp-minify-html'),
@@ -31,7 +32,10 @@ var gulp = require('gulp'),
   hologram = require('gulp-hologram'),
   
   // Server
-  browserSync = require('browser-sync');
+  browserSync = require('browser-sync'),
+
+  // SEO
+  sitemap = require('gulp-sitemap');
 
 
 // Settings
@@ -61,7 +65,7 @@ var src = './src/',
 // COPY
 // Copy extra files like .htaccess, robots.txt
 gulp.task('copy', function () {
-  gulp.src(['./.htaccess', './robots.txt'])
+  return gulp.src(['./.htaccess', './robots.txt'])
     .pipe(gulp.dest(dist));
 });
 
@@ -78,7 +82,7 @@ gulp.task('template', function () {
     return file.contents.toString();
   }
 
-  return gulp.src(src + 'index.html')
+  return gulp.src(src + '*.html')
     .pipe(wiredep({
       includeSelf: true
     }))
@@ -115,17 +119,23 @@ gulp.task('images', function () {
 // SCRIPTS
 // JSHint, Uglify
 gulp.task('scripts', function () {
-  return gulp.src(src + 'scripts/*.js')
+  return gulp.src([src + 'scripts/*.js'])
+    .pipe(concat('main.min.js'))
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
     .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(gulp.dest(dist + 'scripts'))
     .pipe(reload({
       stream: true
     }));
+});
+// Bower components main scripts files
+gulp.task('vendors', function() {
+  var vendorsJS = require('wiredep')().js;
+  return gulp.src(vendorsJS)
+    .pipe(concat('vendors.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(dist+'scripts'));
 });
 
 
@@ -134,6 +144,7 @@ gulp.task('scripts', function () {
 gulp.task('styles', function () {
   return gulp.src(src + 'styles/{,*/}*.{scss,sass}')
     .pipe(sourcemaps.init())
+    .pipe(wiredep())
     .pipe(sass({
       errLogToConsole: true
     }))
@@ -181,10 +192,21 @@ gulp.task('serve', function () {
 });
 
 
+// SEO
+// Generate a Sitemap
+gulp.task('sitemap', function () {
+  return gulp.src(dist+'/*.html')
+    .pipe(sitemap({
+      siteUrl: 'http://www.wearecube.ch'
+    }))
+    .pipe(gulp.dest(dist));
+});
+
+
 // Gulp Default Task
 // ------------------------
 // Having watch within the task ensures that 'sass' has already ran before watching
-gulp.task('default', ['copy', 'template', 'images', 'scripts', 'styles', 'doc', 'serve'], function () {
+gulp.task('default', ['copy', 'vendors', 'template', 'images', 'scripts', 'styles', 'doc', 'sitemap', 'serve'], function () {
   gulp.watch(src + '{,*/}*.html', ['template']);
   gulp.watch(src + 'assets/icons/*.svg', ['template']);
   gulp.watch(src + 'scripts/*.js', ['scripts']);
