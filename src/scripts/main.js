@@ -6,4 +6,4 @@
     // Add your scripts here
   });
 
-})(jQuery, window, document);
+})(window, document);

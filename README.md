@@ -54,19 +54,7 @@ And you're set!
 * `app/styleguide`: The auto-generated documentation
 
 
-#TODO
-
-* [x] Base grid system?
-* [x] HTML mininfied
-* [x] Images optimization
-* [x] SVG Icons 
-* [] Add ModernizR
-* [] Template system (assemble? handlebars?)
-* [] Browser caching (filerev?)
-* [] Tests (karma?)
-
-
-### How to add an icon?
+## How to add an icon?
 
 * Start by creating or choosing a vector icon from the [Entypo library](http://www.entypo.com/)
 * Add the SVG-formatted icon in `src/assets/icons/`
@@ -77,3 +65,15 @@ And you're set!
 ```
 
 * Run `gulp` again
+
+
+#TODO
+
+* [x] Base grid system?
+* [x] HTML mininfied
+* [x] Images optimization
+* [x] SVG Icons 
+* [ ] Add ModernizR
+* [ ] Template system (assemble? handlebars?)
+* [ ] Browser caching (filerev?)
+* [ ] Tests (karma?)
