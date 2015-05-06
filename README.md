@@ -76,6 +76,7 @@ And you're set!
 * [ ] Template system (assemble? handlebars?)
 * [ ] Browser caching (filerev?)
 * [ ] Tests (karma?)
+* [ ] Better documentation
 
 ## Author
 
