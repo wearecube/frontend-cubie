@@ -4,7 +4,7 @@
   "authors": [
     "Pierre Fritsch <fritsch@puzzle.ch>"
   ],
-  "description": "Cubie is an HTML5 starter kit that includes: packages and tasks managers, a local server with browser synchronization, a beautiful auto-generated documentation, a styles pre-processor, files minification and images optimisation",
+  "description": "Cubie is an HTML5 starter kit that includes: package and task management, local server with browser synchronization, beautiful auto-generated documentation, styles pre-processor, files minification and images optimisation",
   "homepage": "http://www.wearecube.ch/frontendcubie/",
   "repository" : { 
     "type" : "git", 

@@ -1,21 +1,20 @@
-# Frontend Cubie
+# Cubie
 
 ## The little front-end companion
 
-Cubie is an HTML5 starter kit that includes: packages and tasks managers, a local server with browser synchronization, a beautiful auto-generated documentation, a styles pre-processor, files minification and images optimisation.
+Cubie is an HTML5 starter kit that includes: package and task management, local server with browser synchronization, beautiful auto-generated documentation, styles pre-processor, files minification and images optimisation.
 
 ## A collection of tools
 
-* Gulp
-* Bower
-* HTML5 Boilerplate
-* LibSass
-* Susy
-* Breakpoint Sass
-* Autoprefixer
-* Hologram
-* BrowserSync
-* And some more
+* [Gulp](http://gulpjs.com/)
+* [Bower](http://bower.io/)
+* [HTML5 Boilerplate](https://html5boilerplate.com/)
+* [LibSass](http://libsass.org/)
+* [Susy](http://susy.oddbird.net/)
+* [Breakpoint Sass](http://breakpoint-sass.com)
+* [Autoprefixer](https://github.com/postcss/autoprefixer)
+* [Hologram](http://trulia.github.io/hologram/)
+* [BrowserSync](http://www.browsersync.io/)
 
 ## Requirements
 
@@ -66,14 +65,22 @@ And you're set!
 
 * Run `gulp` again
 
-
-#TODO
+##TODO
 
 * [x] Base grid system?
 * [x] HTML mininfied
 * [x] Images optimization
 * [x] SVG Icons 
 * [ ] Add ModernizR
+* [ ] Create a Yeoman package generator
 * [ ] Template system (assemble? handlebars?)
 * [ ] Browser caching (filerev?)
 * [ ] Tests (karma?)
+
+## Author
+
+Cubie was made by [Pierre Fritsch](https://github.com/pfritsch) for [We Are Cube.³](https://github.com/wearecube).
+
+## License
+
+Front-end Cubie is licensed under the Apache 2.0 License
