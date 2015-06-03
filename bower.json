@@ -6,9 +6,9 @@
   ],
   "description": "Cubie is an HTML5 starter kit that includes: package and task management, local server with browser synchronization, beautiful auto-generated documentation, styles pre-processor, files minification and images optimisation",
   "homepage": "http://www.wearecube.ch/frontendcubie/",
-  "repository" : { 
-    "type" : "git", 
-    "url" : "https://github.com/wearecube/frontend-cubie.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearecube/frontend-cubie.git"
   },
   "license": "apache 2.0",
   "ignore": [
@@ -25,6 +25,7 @@
     "zepto": "~1.1.6",
     "normalize-scss": "~3.0.3",
     "susy": "~2.2.2",
-    "breakpoint-sass": "~2.5.0"
+    "breakpoint-sass": "~2.5.0",
+    "modernizr": "~2.8.3"
   }
 }
