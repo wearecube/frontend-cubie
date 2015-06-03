@@ -35,30 +35,15 @@ $color-secondary: #418D4B;
 // it could include attribute selectors, pseudo-class selectors, child selectors or sibling
 // selectors. Essentially, a base style says that wherever this element is on the page.
 // ----------------------------------------------
-@import 'base/functions';
+@import 'base/function';
 @import 'base/common';
 @import 'base/typography';
-@import 'base/form';
-@import 'base/btn';
-
-
-// Layout
-// ----------------------------------------------
-// Layout rules divide the page into sections. Layouts hold one or more modules together.
-// We also use Layout rules to define the different key-pages.
-//
-// /* Example layout: Header */
-// .layout-header { }
-// ----------------------------------------------
-// @import 'layout/home';
-@import 'layout/grid';
-@import 'layout/header';
 
 
 // Module
 // ----------------------------------------------
-// Modules are the reusable, modular parts of our design. They are the callouts, the sidebar
-// sections, the product lists and so on.
+// Modules are the reusable, modular parts of our design. They are the callouts, the buttons, 
+// the products and so on. (Micro elements)
 //
 // /* Example module: Product */
 // .product { }
@@ -71,9 +56,34 @@ $color-secondary: #418D4B;
 // ----------------------------------------------
 // @import 'module/panel';
 // @import 'module/product';
-@import 'module/nav';
-@import 'module/logo';
+@import 'module/button';
 @import 'module/icon';
+@import 'module/logo';
+@import 'module/nav';
+
+
+// Layout
+// ----------------------------------------------
+// Layout rules divide the page into sections. Layouts hold one or more modules together. (Macro)
+//
+// /* Example layout: Header */
+// .header-container { }
+// ----------------------------------------------
+@import 'layout/form';
+@import 'layout/grid';
+@import 'layout/header';
+
+
+// Page
+// ----------------------------------------------
+// Styles for specific pages.
+//
+// /* Example layout: Home */
+// .home h1,
+// .home .h1 { }
+// ----------------------------------------------
+// @import 'layout/home';
+// @import 'layout/contact';
 
 
 // State

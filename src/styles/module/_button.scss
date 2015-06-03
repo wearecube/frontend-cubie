@@ -5,23 +5,31 @@
 ---
 title: Button
 name: Button
-category: Base
+category: Module
 ---
 
 Button styles can be applied to any element. Typically you'll want to
 use either a `<button>` or an `<a>` element:
 
 ```html_example
-<button class="btn">Simple button</button>
-<a class="btn" href="http://wearecube.ch">Link with .btn class</a>
-<a class="btn is-primary">Primary button</a>
-<a class="btn is-disabled">Disabled button</a>
+<button class="button">Simple button</button>
+<a class="button" href="http://wearecube.ch">Link with .button class</a>
+<a class="button is-primary">Primary button</a>
+<a class="button is-disabled">Disabled button</a>
+```
+
+Three sizes for the buttons: small, medium (default) and big.
+
+```html_example
+<a class="button is-small">Small</a>
+<a class="button">Medium</a>
+<a class="button is-big">Big</a>
 ```
 */
 
-.btn, 
-button.btn,
-a.btn {
+.button, 
+button.button,
+a.button {
   display: inline-block;
   padding: rem-calc(5 12);
   background-color: #eee;
@@ -73,22 +81,9 @@ a.btn {
   }
 }
 
-/*doc
----
-title: Button sizes
-category: Base
----
-
-Three sizes for the buttons: small, medium (default) and big.
-
-```html_example
-<a class="btn is-small">Big button</a>
-<a class="btn is-big">Big button</a>
-```
-*/
-.btn, 
-button.btn,
-a.btn {
+.button, 
+button.button,
+a.button {
   &.is-small {
     padding: rem-calc(3 6);
     font-size: rem-calc(12);
@@ -96,7 +91,7 @@ a.btn {
   &.is-primary.is-small {
     padding: rem-calc(2 6);
   }
-  .btn.is-big {
+  .button.is-big {
     padding: rem-calc(11 24);
     font-size: rem-calc(18);
   }

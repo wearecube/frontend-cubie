@@ -6,13 +6,13 @@ category: Layout
 ---
 
 ```html_example
-<header class="header-layout" role="banner">
+<header class="header-container" role="banner">
   The header's content gets here
 </header>
 ```
 */
 
-.header-layout {
+.header-container {
   padding: rem-calc(24 0);
 }
 .header-logo {

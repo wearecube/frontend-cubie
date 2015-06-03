@@ -1,22 +1,25 @@
-// Functions
+// Functions & Mixins
 // ----------------------------------------------
 // From the Foundation framework https://github.com/zurb/foundation
 // ----------------------------------------------
 
-// STRIP UNIT
+// Strip Unit
 // It strips the unit of measure and returns it
+// ----------------------------------------------
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
 
-// CONVERT TO REM
+// Convert to REM
+// ----------------------------------------------
 @function convert-to-rem($value, $base-value: $base-font) {
   $value: strip-unit($value) / strip-unit($base-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }
 
-// REM CALC 
+// REM calc
+// ----------------------------------------------
 @function rem-calc($values, $base-value: $base-font) {
   $max: length($values);
 
@@ -29,8 +32,10 @@
   @return $remValues;
 }
 
-
-// Mixins
+// MIXINS
+// ----------------------------------------------
+// Reset list
+// ----------------------------------------------
 @mixin reset-list {
   list-style: none;
   margin: 0;

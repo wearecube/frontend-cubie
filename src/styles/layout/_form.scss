@@ -2,13 +2,13 @@
 ---
 title: Forms
 name: forms
-category: Base
+category: Layout
 ---
 
 The HTML fieldset element is used to group several controls as well as labels (label) within a web form.
 
 ```html_example
-<form action="" method="">
+<form action="" method="" class="form-container">
   <fieldset>
     <legend>Login</legend>
     <label for="email">Email</label> <input id="email" name="email" type="email" placeholder="type your email here">
@@ -21,32 +21,6 @@ The HTML fieldset element is used to group several controls as well as labels (l
 
 // Fieldset
 // ----------------------------------------------
-fieldset {
-  
-}
+.form-container fieldset {
 
-// Labels
-// ----------------------------------------------
-label {
-
-}
-
-// Input / Textarea
-// ----------------------------------------------
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-textarea {
-  color: #333;
-  padding: rem-calc(5 12);
-  border: 1px solid #ccc;
-  line-height: rem-calc(24);
-  vertical-align: middle;
-
-  &:focus {
-    border-color: #333;
-  }
 }

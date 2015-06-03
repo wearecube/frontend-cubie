@@ -1,0 +1,33 @@
+/*doc
+---
+title: Input and Textarea
+name: input
+category: Base
+---
+
+```html_example
+<input type="email" placeholder="Enter email">
+<textarea placeholder="Comment"></textarea> 
+<input id="check" type="checkbox" name="check"> <label for="check">I'm ok</label>
+```
+*/
+
+// Input / Textarea
+// ----------------------------------------------
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  color: #333;
+  padding: rem-calc(5 12);
+  border: 1px solid #ccc;
+  line-height: rem-calc(24);
+  vertical-align: middle;
+
+  &:focus {
+    border-color: #333;
+  }
+}
