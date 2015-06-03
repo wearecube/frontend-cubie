@@ -71,7 +71,7 @@ And you're set!
 * [x] HTML mininfied
 * [x] Images optimization
 * [x] SVG Icons 
-* [ ] Add ModernizR
+* [X] Add ModernizR
 * [ ] Create a Yeoman package generator
 * [ ] Template system (assemble? handlebars?)
 * [ ] Browser caching (filerev?)
