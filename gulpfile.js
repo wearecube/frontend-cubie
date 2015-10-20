@@ -91,11 +91,10 @@ gulp.task('template', function () {
       conditionals: true,
       spare: true
     }))
-    .pipe(gulp.dest(dist))
-    .pipe(reload({
-      stream: true
-    }));
+    .pipe(gulp.dest(dist));
 });
+
+gulp.task('template-watch', ['template'], reload);
 
 
 // IMAGES
@@ -177,21 +176,6 @@ gulp.task('doc', function () {
     }));
 });
 
-
-// SERVER
-// Browser Sync
-gulp.task('serve', function () {
-  return browserSync.init(null, {
-    server: {
-      baseDir: dist,
-      routes: {
-        "/bower_components": "bower_components"
-      }
-    }
-  });
-});
-
-
 // SEO
 // Generate a Sitemap
 gulp.task('sitemap', function () {
@@ -202,15 +186,29 @@ gulp.task('sitemap', function () {
     .pipe(gulp.dest(dist));
 });
 
+// BUILD
+gulp.task('build', ['copy', 'vendors', 'template', 'images', 'scripts', 'styles'], reload);
 
-// Gulp Default Task
-// ------------------------
-// Having watch within the task ensures that 'sass' has already ran before watching
-gulp.task('default', ['copy', 'vendors', 'template', 'images', 'scripts', 'styles', 'doc', 'sitemap', 'serve'], function () {
-  gulp.watch(src + '{,*/}*.html', ['template']);
-  gulp.watch(src + 'assets/icons/*.svg', ['template']);
+// SERVER
+// Browser Sync (wait build task to be done)
+gulp.task('serve', ['build'], function () {
+  browserSync({
+    notify: false,
+    server: {
+      baseDir: dist,
+      routes: {
+        "/bower_components": "bower_components"
+      }
+    }
+  });
+  gulp.watch(src + '**/*.{html,json,svg}', ['template-watch']);
   gulp.watch(src + 'scripts/*.js', ['scripts']);
   gulp.watch(src + 'assets/images/*', ['images']);
   gulp.watch(src + 'styles/{,*/}*.{scss,sass}', ['styles', 'doc']);
   gulp.watch(src + 'styles/styleguide.md', ['doc']);
 });
+
+// Gulp Default Task
+// ------------------------
+// Having watch within the task ensures that 'sass' has already ran before watching
+gulp.task('default', ['build', 'doc', 'sitemap', 'serve']);
